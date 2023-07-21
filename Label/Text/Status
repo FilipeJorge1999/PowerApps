@@ -1,0 +1,10 @@
+Switch(
+    ThisItem.Status.Value,    
+    "Assignado para execução", "Assignado para execução",
+    "Em execução", "Em execução",
+    "Pendente de Terceiros", "Pendente de Terceiros",
+    "Reabertos", "Reabertos",
+    "Fechado", "Fechado",
+    "Novo", If(IsEmpty(ThisItem.Assignar.DisplayName), "Novo/Por Assignar", "Assignado para execução2"),
+    "NA" // If the status doesn't match any of the above, show "NA"
+)
